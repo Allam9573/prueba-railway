@@ -81,12 +81,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-print(os.getenv('DATABASE_URL'))
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-print(os.getenv('DATABASE_URL'))
 DATABASES = {
-    "default": dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    "default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL"),
+        engine="django.db.backends.mysql"  # Especifica el motor aquí
+    )
 }
 
 # Password validation
