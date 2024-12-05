@@ -85,11 +85,11 @@ print(os.getenv('DATABASE_URL'))
 DATABASES = {
      "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.getenv('NAME'),
-        "USER": os.getenv('USER'),
-        "PASSWORD": os.getenv('PASSWORD'),
-        "HOST": os.getenv('HOST'),
-        "PORT": os.getenv('PORT'),
+        "NAME": os.getenv('MYSQL_DATABASE'),
+        "USER": os.getenv('MYSQL_USER'),
+        "PASSWORD": os.getenv('MYSQL_PASSWORD'),
+        "HOST": os.getenv('MYSQL_HOST'),
+        "PORT": os.getenv('MYSQL_PORT'),
     }
 }
 
