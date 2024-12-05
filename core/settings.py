@@ -32,7 +32,8 @@ SECRET_KEY = 'django-insecure-m=3qtowsqayly*nxbrb_vynh*5en(1*c6@ze5hr3y0el6!68op
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['prueba-railway-production-40be.up.railway.app','prueba-railway-production-40be.up.railway.app/admin']
+ALLOWED_HOSTS = ['prueba-railway-production-40be.up.railway.app',
+                 'prueba-railway-production-40be.up.railway.app/admin']
 
 
 # Application definition
@@ -83,7 +84,7 @@ print(os.getenv('DATABASE_URL'))
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-     "default": {
+    "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": os.getenv('MYSQL_DATABASE'),
         "USER": os.getenv('MYSQL_USER'),
