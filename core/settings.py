@@ -119,7 +119,6 @@ USE_I18N = True
 USE_TZ = True
 
 STORAGES = {
-    # ...
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
