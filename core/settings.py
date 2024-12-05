@@ -86,9 +86,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
-        engine="django.db.backends.mysql"  # Especifica el motor aquí
-    )
+        default=os.getenv("DATABASE_URL"), conn_max_age=600, engine="django.db.backends.mysql")
+    # "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     "NAME": "railway",
+    #     "USER": "root",
+    #     "PASSWORD": "mYHsQhlVbDWwNFGoMyibyyaDUWzbDHay",
+    #     "HOST": "mysql.railway.internal",
+    #     "PORT": "3306",
+    # }
 }
 
 # Password validation
@@ -139,4 +145,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticsfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://prueba-railway-production-40be.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'https://prueba-railway-production-40be.up.railway.app']
