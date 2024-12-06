@@ -32,8 +32,8 @@ SECRET_KEY = 'django-insecure-m=3qtowsqayly*nxbrb_vynh*5en(1*c6@ze5hr3y0el6!68op
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['prueba-railway-production-40be.up.railway.app',
-                 'prueba-railway-production-40be.up.railway.app/admin']
+ALLOWED_HOSTS = ['prueba-railway-production-fb1e.up.railway.app/',
+                 'prueba-railway-production-fb1e.up.railway.app/admin']
 
 
 # Application definition
@@ -89,8 +89,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "railway",
         "USER": "root",
-        "PASSWORD": "bMwWXnMrPLfKdXetptLjqAvGIZLjMusQ",
-        "HOST": "root",
+        "PASSWORD": "ctYjooCBieryyVCQCeAQVTOXxZLVZRVh",
+        "HOST": "mysql.railway.internal",
         "PORT": "3306",
     }
 }
@@ -143,4 +143,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticsfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://prueba-railway-production-40be.up.railway.app']
+    'https://prueba-railway-production-fb1e.up.railway.app']
